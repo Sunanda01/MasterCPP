@@ -17,6 +17,10 @@ class box
     {
         cout<<endl<<"Area is "<<dim1*dim2;
     }
+    ~box()      //destructor
+    {
+        cout<<"DEAD"<<endl;
+    }
 };
 int main()
 {
