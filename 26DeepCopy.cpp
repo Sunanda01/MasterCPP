@@ -7,6 +7,11 @@ class A
            {
                p=new int(x);
            }
+           A (A &t)
+           {
+               int val=*(t.p);
+               p=new int(val);
+           }
            void set(int x)
            {
                *p=x;
@@ -21,6 +26,6 @@ int main()
     A a(10);
     A b(a);
     b.set(20);
-    a.get();//20
+    a.get();//10
     b.get();//20
 }
